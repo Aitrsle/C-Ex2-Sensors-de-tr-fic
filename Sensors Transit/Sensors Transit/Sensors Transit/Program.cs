@@ -75,7 +75,7 @@ namespace SensorsTransit
         arrayLocal[i] = Sensors[i].EnviaDadesCentral();
     });
 
-    SensorsLocal = arrayLocal.ToList();
+        SensorsLocal = arrayLocal.ToList();
 }
 
         //TASCA A FER: Cal optimitzar aquest mètode, si és possible utilitzant mètodes de programació en paral·lel, concretamen el Parallel.For
