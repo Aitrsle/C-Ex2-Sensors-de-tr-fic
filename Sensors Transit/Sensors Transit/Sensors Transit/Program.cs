@@ -68,13 +68,15 @@ namespace SensorsTransit
         /// <summary>
         /// Aquest mètode rep les dades de cada sensor a través del mètode EnviaDadesCentral (que té un retard) i un cop rebuda la informació s'afegeix a la llista Vehicles
         /// </summary>
-        public void RebreDadesSensors()
-        {
-            for (int i = 0; i < NumSensors; i++)
-            {
-                SensorsLocal.Add(Sensors[i].EnviaDadesCentral());
-            }
-        }
+       public void RebreDadesSensors(){
+       Sensor[] arrayLocal = new Sensor[NumSensors];
+
+       Parallel.For(0, NumSensors, i =>{
+        arrayLocal[i] = Sensors[i].EnviaDadesCentral();
+    });
+
+    SensorsLocal = arrayLocal.ToList();
+}
 
         //TASCA A FER: Cal optimitzar aquest mètode, si és possible utilitzant mètodes de programació en paral·lel, concretamen el Parallel.For
         /// <summary>
