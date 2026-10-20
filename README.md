@@ -1,3 +1,3 @@
 # C-Ex2-Sensors-de-tr-fic
 
-Aqui estan los ejercicios de C#
+Aqui estan los ejercicios de C# de Señales de trafico
