@@ -144,27 +144,55 @@ namespace SensorsTransit
         /// <summary>
         /// Aquest mètode ordena el nombre de vehicles. S'utilitza el mètode EstanOrdenats (que té un retard)
         /// </summary>
-        public void OrdenaVehicles()
-        {
-            bool canvi = true;
-            Sensor aux;
+        // Tarea 5: OrdenaVehicles optimizado con Parallel.For (Odd-Even Sort)
+public void OrdenaVehicles()
+{
+    SensorsLocalOrd = new List<Sensor>(SensorsLocal);
+    bool ordenat = false;
 
-            SensorsLocalOrd = SensorsLocal;
-            while (canvi)
+    while (!ordenat)
+    {
+        ordenat = true;
+
+        // Pasada impar
+        Parallel.For(0, (NumSensors / 2), i =>
+        {
+            int idx = 2 * i + 1;
+            if (idx < NumSensors - 1)
             {
-                canvi = false;
-                for (int i = 0; i < NumSensors - 1; i++)
+                if (EstanOrdenats(SensorsLocalOrd[idx], SensorsLocalOrd[idx + 1]))
                 {
-                    if (EstanOrdenats(SensorsLocalOrd[i], SensorsLocalOrd[i + 1]))
+                    lock (SensorsLocalOrd)
                     {
-                        aux = SensorsLocalOrd[i];
-                        SensorsLocalOrd[i] = SensorsLocalOrd[i + 1];
-                        SensorsLocalOrd[i + 1] = aux;
-                        canvi = true;
+                        Sensor temp = SensorsLocalOrd[idx];
+                        SensorsLocalOrd[idx] = SensorsLocalOrd[idx + 1];
+                        SensorsLocalOrd[idx + 1] = temp;
                     }
+                    ordenat = false;
                 }
             }
-        }
+        });
+
+        // Pasada par
+        Parallel.For(0, (NumSensors / 2), i =>
+        {
+            int idx = 2 * i;
+            if (idx < NumSensors - 1)
+            {
+                if (EstanOrdenats(SensorsLocalOrd[idx], SensorsLocalOrd[idx + 1]))
+                {
+                    lock (SensorsLocalOrd)
+                    {
+                        Sensor temp = SensorsLocalOrd[idx];
+                        SensorsLocalOrd[idx] = SensorsLocalOrd[idx + 1];
+                        SensorsLocalOrd[idx + 1] = temp;
+                    }
+                    ordenat = false;
+                }
+            }
+        });
+    }
+}
 
         //Aquest mètode no es pot modificar
         private void Mostra(string Missatge)
