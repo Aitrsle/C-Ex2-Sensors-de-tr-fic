@@ -119,12 +119,19 @@ namespace SensorsTransit
         /// </summary>
         public void CalcularMitjana()
         {
-            for (int i = 0; i < NumSensors; i++)
-            {
-                SumaVehicles = Suma(SumaVehicles, SensorsLocal[i]);
-            }
-            MitjanaVehicles = SumaVehicles / NumSensors;
+        SumaVehicles = 0;
+        object lockSuma = new object();
+
+        Parallel.For(0, NumSensors, i =>
+        {
+        lock (lockSuma)
+        {
+            SumaVehicles = Suma(SumaVehicles, SensorsLocal[i]);
         }
+    });
+
+    MitjanaVehicles = SumaVehicles / NumSensors;
+}
 
         //TASCA A FER: Optimitzar aquest mètode si és possible
         /// <summary>
