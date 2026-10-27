@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sensors Transit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33c9176bc752cbd5e707c3affd4bbe0853855b14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46c5ffcbf9d9d0f40de23a4d909fe0b97fdfef16")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sensors Transit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sensors Transit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

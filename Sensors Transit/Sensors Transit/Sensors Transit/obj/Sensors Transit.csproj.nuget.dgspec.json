@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\C#\\C-Ex2-Sensors-de-tr-fic\\Sensors Transit\\Sensors Transit\\Sensors Transit\\Sensors Transit.csproj": {}
+    "C:\\Users\\Silvr\\Documents\\lel\\C#\\C-Ex2-Sensors-de-tr-fic\\Sensors Transit\\Sensors Transit\\Sensors Transit\\Sensors Transit.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\C#\\C-Ex2-Sensors-de-tr-fic\\Sensors Transit\\Sensors Transit\\Sensors Transit\\Sensors Transit.csproj": {
+    "C:\\Users\\Silvr\\Documents\\lel\\C#\\C-Ex2-Sensors-de-tr-fic\\Sensors Transit\\Sensors Transit\\Sensors Transit\\Sensors Transit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\C#\\C-Ex2-Sensors-de-tr-fic\\Sensors Transit\\Sensors Transit\\Sensors Transit\\Sensors Transit.csproj",
+        "projectUniqueName": "C:\\Users\\Silvr\\Documents\\lel\\C#\\C-Ex2-Sensors-de-tr-fic\\Sensors Transit\\Sensors Transit\\Sensors Transit\\Sensors Transit.csproj",
         "projectName": "Sensors Transit",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\C#\\C-Ex2-Sensors-de-tr-fic\\Sensors Transit\\Sensors Transit\\Sensors Transit\\Sensors Transit.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\C#\\C-Ex2-Sensors-de-tr-fic\\Sensors Transit\\Sensors Transit\\Sensors Transit\\obj\\",
+        "projectPath": "C:\\Users\\Silvr\\Documents\\lel\\C#\\C-Ex2-Sensors-de-tr-fic\\Sensors Transit\\Sensors Transit\\Sensors Transit\\Sensors Transit.csproj",
+        "packagesPath": "C:\\Users\\Silvr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Silvr\\Documents\\lel\\C#\\C-Ex2-Sensors-de-tr-fic\\Sensors Transit\\Sensors Transit\\Sensors Transit\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Silvr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -30,7 +30,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "framework": "netcoreapp3.1",
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
@@ -45,11 +44,10 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "framework": "netcoreapp3.1",
           "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
@@ -85,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.318\\RuntimeIdentifierGraph.json"
         }
       }
     }
