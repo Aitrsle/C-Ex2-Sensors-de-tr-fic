@@ -81,15 +81,13 @@ namespace SensorsTransit
         /// Aquest mètode mostra les dades de tots els sensors, però no cal que sigui en ordre.
         /// </summary>
         public void MostraDadesSensors()
+{
+        Parallel.For(0, NumSensors, i =>
         {
-            string Missatge;
-
-            for (int i = 0; i < NumSensors; i++)
-            {
-                Missatge = "Sensor nº " + SensorsLocal[i].IdSensor + " --- " + SensorsLocal[i].NumVehicles + " vehicles comptabilitzats.";
-                Mostra(Missatge);
-            }
-        }
+            string missatge = "Sensor nº " + SensorsLocal[i].IdSensor + " --- " + SensorsLocal[i].NumVehicles + " vehicles comptabilitzats.";
+            Mostra(missatge);
+        });
+}
 
         //No cal optimitzar aquest mètode, només és per comprovar que s'han ordenat bé les dades
         public void MostraDadesOrdenades()
